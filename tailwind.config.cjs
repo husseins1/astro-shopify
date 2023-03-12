@@ -6,7 +6,13 @@ module.exports = {
       center: true,
       padding: "1.5rem",
     },
+
+   
+    
     extend: {
+      colors:{
+        'main':'#E6E6FA'
+      },
       keyframes: {
         shake: {
           "0%": { transform: "translate(1px, 1px) rotate(0deg)" },
@@ -27,5 +33,6 @@ module.exports = {
       },
     },
   },
+  
   plugins: [require("@tailwindcss/aspect-ratio")],
 };

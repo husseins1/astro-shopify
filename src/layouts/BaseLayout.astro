@@ -27,11 +27,11 @@ const { title, description = defaultDesc } = Astro.props as Props;
       @import "../styles/global.css";
     </style>
   </head>
-  <body>
+  <body class="bg-main">
     <AnnouncementBar />
-    <CartDrawer client:idle />
+    <!-- <CartDrawer client:idle /> -->
     <Header />
-    <main>
+    <main >
       <slot />
     </main>
     <Footer />
