@@ -21,17 +21,21 @@ import CartIcon from "./CartIcon.svelte";
       </div>
     </nav> -->
 		<div class="relative inline-block text-left group">
-  <div type="button" class="inline-flex justify-center w-full  shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-haspopup="true" aria-expanded="false">
-    Dropdown
+  <button type="button" class="inline-flex justify-center w-full   px-4 py-2 bg-white text-sm font-medium text-gray-700  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-haspopup="true" aria-expanded="false">
+    <a href="" class="hover:text-purple-500">Dropdown</a>
+    
     <!-- Heroicon name: solid/chevron-down -->
-    <svg class="-mr-1 ml-2 h-5 w-5 group-hover:translateX(-5%)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <svg class="-mr-1 ml-2 h-5 w-5 group-hover:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
     </svg>
-  </div>
-  <div class="opacity-0 invisible absolute z-50 bg-white text-gray-800 rounded-md shadow-lg py-1 mt-1 group-hover:opacity-100 group-hover:visible transition-all duration-300">
-    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Link 1</a>
-    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Link 2</a>
-    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Link 3</a>
+  </button>
+  <div style="background: linear-gradient(82deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 45%, rgba(255,255,255,1) 55%);" class="invisible opacity-0  absolute z-50 bg-white text-gray-800 rounded-md shadow-lg py-1 mt-1 group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2  h-auto min-w-max  ">
+    <a href="#" class="block px-4 py-2 text-sm group/item max-w-[200px]  ">
+    <h1 class="group-hover/item:text-purple-500 font-medium ">Link 1</h1>
+    <p class="font-light" >Lorem ipsum is go and i will i always like fffff fd d dfdf dfssd  asksajj saijasj asiajsijsa aisijai sasijsaij ciaiji</p>
+    </a>
+    
+    
   </div>
 </div>
 
