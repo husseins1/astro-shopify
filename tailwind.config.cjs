@@ -11,7 +11,7 @@ module.exports = {
     
     extend: {
       colors:{
-        'main':'#E6E6FA'
+        'main':'#f4f4f4'
       },
       keyframes: {
         shake: {

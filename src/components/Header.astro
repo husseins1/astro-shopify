@@ -4,7 +4,7 @@ import CartIcon from "./CartIcon.svelte";
 ---
 
 <header class="sticky top-0 z-40">
-  <div class="border-b bg-white/70 py-3 backdrop-blur-2xl">
+  <nav class="flex  relative  " >
     <!-- <nav class="container grid grid-cols-3 items-center">
       <a href="/">
         <span class="sr-only">Logo</span>
@@ -21,7 +21,7 @@ import CartIcon from "./CartIcon.svelte";
       </div>
     </nav> -->
 		<div class="relative inline-block text-left group">
-  <button type="button" class="inline-flex justify-center w-full   px-4 py-2 bg-white text-sm font-medium text-gray-700  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="inline-flex justify-center w-full  py-2  text-md font-medium  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 items-center" aria-haspopup="true" aria-expanded="false">
     <a href="" class="hover:text-purple-500">Dropdown</a>
     
     <!-- Heroicon name: solid/chevron-down -->
@@ -29,7 +29,7 @@ import CartIcon from "./CartIcon.svelte";
       <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
     </svg>
   </button>
-  <div style="background: linear-gradient(82deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 45%, rgba(255,255,255,1) 55%);" class="invisible opacity-0  absolute z-50 bg-white text-gray-800 rounded-md shadow-lg py-1 mt-1 group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2  h-auto min-w-max  ">
+  <div style="background: linear-gradient(82deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 45%, rgba(255,255,255,1) 55%);" class="invisible opacity-0  absolute z-50 bg-white  rounded-md shadow-lg py-1 mt-1 group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2  h-auto min-w-max  ">
     <a href="#" class="block px-4 py-2 text-sm group/item max-w-[200px]  ">
     <h1 class="group-hover/item:text-purple-500 font-medium ">Link 1</h1>
     <p class="font-light" >Lorem ipsum is go and i will i always like fffff fd d dfdf dfssd  asksajj saijasj asiajsijsa aisijai sasijsaij ciaiji</p>
@@ -39,5 +39,149 @@ import CartIcon from "./CartIcon.svelte";
   </div>
 </div>
 
-  </div>
+ <button class="ml-auto lg:hidden" id="menu-toggle">
+          <svg
+            
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-10 h-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+<!-- overlay nav -->
+
+<div>
+
+ 
+</div>
+  </nav>
+  <div aria-hidden="true" class="overlay absolute z-40 bg-main lg:hidden ">
+        <div class="parent">
+          <button class="accordion">
+            <span class="text-md font-medium">Section 1 </span>
+            <span class="chevron">
+              <svg
+                width="20px"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                /></svg
+            ></span>
+          </button>
+          <div class="panel   transition-all duration-300  grid-cols-2">
+            <a href="#" class="block  py-2 text-sm group/item max-w-[200px]  ">
+               <h1 class="group-hover/item:text-purple-500 font-medium ">Link 1</h1>
+               <p class="font-light" >Lorem ipsum is go and i will i always like fffff fd d dfdf dfssd  asksajj saijasj asiajsijsa aisijai sasijsaij ciaiji</p>
+             </a>
+            <a href="#" class="block  py-2 text-sm group/item max-w-[200px]  ">
+               <h1 class="group-hover/item:text-purple-500 font-medium ">Link 1</h1>
+               <p class="font-light" >Lorem ipsum is go and i will i always like fffff fd d dfdf dfssd  asksajj saijasj asiajsijsa aisijai sasijsaij ciaiji</p>
+             </a>
+          </div>
+        
+        </div>
+      </div>
 </header>
+<style>
+.menu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 50;
+  }
+  .overlay {
+    width: 100%;
+    visibility: hidden;
+    display: none;
+    transition: all 0.3s ease-out;
+    transition: left 3s ease-out;
+  }
+  .show {
+    display: block;
+
+    visibility: visible;
+  }
+  .accordion {
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+
+    width: 100%;
+
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .panel {
+    padding: 0;
+    display: none;
+   
+    opacity:0;
+    
+    overflow: hidden;
+    
+   
+    
+  }
+  button.accordion.active + .panel {
+    
+    
+    opacity:1;
+    display:grid;
+  }
+  button.accordion svg {
+    transition: transform 0.3s linear;
+  }
+  button.accordion.active svg {
+    transform: rotate(180deg);
+  }
+</style>
+<script>
+  const menuToggle = document.querySelector("#menu-toggle");
+  const overlay = document.querySelector(".overlay");
+  menuToggle.addEventListener("click", (e) => {
+    overlay.classList.toggle("show");
+  });
+  const acc = document.getElementsByClassName("accordion");
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      // if (panel.style.height === "auto") {
+      //   panel.style.height = "0";
+      // } else {
+      //   panel.style.height = "auto";
+      // }
+    });
+  }
+</script>
