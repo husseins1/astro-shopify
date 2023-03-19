@@ -5,7 +5,7 @@ import Dropdown from "./Dropdown.astro";
 ---
 
 <header class="sticky top-0 z-40">
-  <nav class="flex  relative  " >
+  <nav class="flex  relative mx-auto max-w-[1200px] px-6" >
     <!-- <nav class="container grid grid-cols-3 items-center">
       <a href="/">
         <span class="sr-only">Logo</span>
@@ -21,6 +21,7 @@ import Dropdown from "./Dropdown.astro";
         <CartIcon client:load />
       </div>
     </nav> -->
+    
 		<Dropdown />
 
  <button class="ml-auto lg:hidden" id="menu-toggle">
